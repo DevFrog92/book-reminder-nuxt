@@ -1,0 +1,43 @@
+/* global css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* game global css */
+.game_bg_wrapper {
+  align-items: center;
+  background-color: #393939;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  position: relative;
+  width: 100%;
+}
+
+.play_game_screen {
+  background-color: #fff;
+  border-radius: 1rem;
+  height: 30rem;
+  position: relative;
+  width: 50rem;
+}
+
+:root {
+  --bg: #fff;
+}
+
+.gray-mode {
+  --bg: #f5f3f1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--bg);
+  font-family: Pretendard;
+}
