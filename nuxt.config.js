@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "book-reminder-nuxt",
+    title: "북적북적",
     htmlAttrs: {
       lang: "en",
     },
@@ -40,5 +40,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  // env
+  env: {
+    clinetId: "3Nx7zeZKhj6UiKnRC3FE",
+    clientSecret: "KPJRXxrFg8",
   },
 }
