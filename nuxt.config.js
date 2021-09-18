@@ -44,7 +44,6 @@ export default {
 
   // env
   env: {
-    clinetId: "3Nx7zeZKhj6UiKnRC3FE",
-    clientSecret: "KPJRXxrFg8",
+    KakaoKEY: "fb855019516acedb413322026661104a",
   },
 }
