@@ -6,7 +6,7 @@ const instance = axios.create({
 })
 
 function fetchBookInfo() {
-  return instance.get("/search/book.json", { params: { d_titl: "공강이만든공간", }, })
+  return instance.get("/search/book.json", { params: { query: "공간이만든공간", d_titl: "공강이만든공간", }, })
 }
 
 export {
