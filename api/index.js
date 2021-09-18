@@ -5,11 +5,8 @@ const instance = axios.create({
   headers: { Authorization: `KakaoAK ${process.env.KakaoKEY}`, },
 })
 
-function fetchBookInfo() {
-  console.log(instance)
-
-  // console.log(instance.get("/book"))
-  return instance.get("/book", { params: { query: "공간이만든공간", }, })
+function fetchBookInfo(keyword) {
+  return instance.get("/book", { params: { query: keyword, }, })
 }
 
 export {
