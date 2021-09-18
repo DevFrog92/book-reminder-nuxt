@@ -1,12 +1,16 @@
 <template>
   <div class="search-items-wrapper">
-    this is items view
+    {{ searchBookList }}
   </div>
 </template>
 
 <script>
 export default {
-
+  computed: {
+    searchBookList() {
+      return this.$store.state.search.searchBookList || null
+    },
+  },
 }
 </script>
 
