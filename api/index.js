@@ -6,7 +6,7 @@ const instance = axios.create({
 })
 
 function fetchBookInfo(keyword) {
-  return instance.get("/book", { params: { query: keyword, }, })
+  return instance.get("/book", { params: { query: keyword, size: 50, }, })
 }
 
 export {

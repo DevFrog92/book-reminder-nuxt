@@ -1,5 +1,5 @@
 export const state = () => ({
-  searchBookList: [],
+  searchBookList: null,
 })
 
 export const mutations = {

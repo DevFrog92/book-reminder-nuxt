@@ -1,6 +1,10 @@
 <template>
   <div class="search-items-wrapper">
-    {{ searchBookList }}
+    <SearchBookItem
+      v-for="(bookItem,index) in searchBookList"
+      :key="index"
+      :book-item="bookItem"
+    />
   </div>
 </template>
 

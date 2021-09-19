@@ -7,7 +7,7 @@
       />
       <SearchButton @click="search" />
     </section>
-    <SearchBooks />
+    <SearchBookList />
   </div>
 </template>
 
@@ -35,6 +35,7 @@ export default {
       try {
         const response = await fetchBookInfo(this.bookTitle)
 
+        this.bookTitle = ""
         this.calledSearch = false
         console.log(response.data.documents)
         this.$store.commit("search/SET_SEARCH_BOOK_LIST", response.data.documents)
