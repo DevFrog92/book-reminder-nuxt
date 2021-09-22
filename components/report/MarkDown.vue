@@ -1,14 +1,16 @@
 <template>
   <div class="mark-down-wrapper">
     <ClientOnly>
+      <div class="show-content" />
       <editor
-        v-model="content"
+        ref="toastTextUi"
+        :value="content"
         :initial-value="initalValue"
         :options="options"
         align="left"
         height="600px"
       />
-      <button @click="write">
+      <button @click="getHTML">
         작성
       </button>
     </ClientOnly>
@@ -33,6 +35,15 @@ export default {
     },
     write() {
       console.log(this.content)
+    },
+    getHTML() {
+      const contentElem = document.querySelector(".show-content")
+      let html = this.$refs.toastTextUi.invoke("getHTML")
+
+      contentElem.innerHTML = html
+
+      // this.contentHTML = html
+      console.log(html)
     },
   },
 
