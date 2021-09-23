@@ -2,7 +2,7 @@
   <nav class="nav-wrapper">
     <div class="logo-wrapper">
       <div
-        class="link logo-link"
+        class="logo-link"
         to="/"
         @click="moveToHome"
       />
@@ -47,7 +47,6 @@ export default {
   font-family: 'BMDOHYEON';
   align-items: center;
   justify-content: flex-end;
-  border-bottom: 1px solid rgba(0,0,0,0.7);
   position: relative;
 }
 
@@ -63,6 +62,8 @@ export default {
 .link {
   margin-right: 1.5rem;
   color: rgba(0,0,0,0.8);
+  padding: 0.5rem;
+  font-size: .8rem;
   text-decoration: none;
 }
 
