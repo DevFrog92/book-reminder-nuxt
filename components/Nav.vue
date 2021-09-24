@@ -54,7 +54,7 @@ export default {
   left: 50%;
   transform: translate(-50%,0);
   height: 100%;
-  width: 6rem;
+  width: 7rem;
   height: 6rem;
 }
 
@@ -83,7 +83,7 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 6rem;
+  width: 7rem;
   height: 3rem;
   cursor: pointer;
 }
