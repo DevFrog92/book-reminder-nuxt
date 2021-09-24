@@ -28,16 +28,17 @@ export default {
 
         return
       }
+
       if (this.calledSearch) {
         return
       }
+
       this.calledSearch = true
       try {
         const response = await fetchBookInfo(this.bookTitle)
 
         this.bookTitle = ""
         this.calledSearch = false
-        console.log(response.data.documents)
         this.$store.commit("search/SET_SEARCH_BOOK_LIST", response.data.documents)
       } catch (error) {
         throw new Error(error)

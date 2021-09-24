@@ -9,18 +9,28 @@
     <div class="book-thumbnail">
       <img
         :src="bookItem.thumbnail"
-        alt=""
+        alt="book cover thumbnail"
       >
     </div>
+    <button @click="moveToReport">
+      독후감 작성하기
+    </button>
   </div>
 </template>
 
 <script>
+import { setItem, } from "~/assets/util/localStorage.js"
 export default {
   props: {
     bookItem: {
       type: Object,
       default: () => ({}),
+    },
+  },
+  methods: {
+    moveToReport() {
+      setItem("bookInfo", this.bookItem)
+      this.$router.push("/report")
     },
   },
 }
