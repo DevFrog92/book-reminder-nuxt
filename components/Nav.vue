@@ -3,7 +3,6 @@
     <div class="logo-wrapper">
       <div
         class="logo-link"
-        to="/"
         @click="moveToHome"
       />
     </div>
