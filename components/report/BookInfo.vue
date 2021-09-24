@@ -5,19 +5,14 @@
         :src="bookInfo.thumbnail"
         alt="book cover"
         class="book-cover-img"
+        @click="showDesc"
       >
     </div>
-    <div class="book-desc-wrapper">
-      <h3 class="book-title">
-        {{ bookInfo.title }}
-      </h3>
-      <h5>
-        {{ bookInfo.authors[0] }}
-      </h5>
-      <p class="book-content">
-        {{ bookInfo.contents }}
-      </p>
-    </div>
+    <ReportHoverModal
+      v-if="showDescState"
+      class="book-hover-modal"
+      :book-info="bookInfo"
+    />
   </div>
 </template>
 
@@ -30,9 +25,10 @@ export default {
         thumbnail: null,
         title: null,
         contents: null,
-        auth: null,
+        authors: [null],
       },
       imgEle: null,
+      showDescState: false,
     }
   },
   beforeMount() {
@@ -46,6 +42,10 @@ export default {
     setBookCover() {
       this.imgEle.src = this.bookInfo.thumbnail
     },
+    showDesc() {
+      this.showDescState = !this.showDescState
+    },
+
   },
 }
 </script>
@@ -54,10 +54,11 @@ export default {
 .book-info-wrapper {
   width: 100%;
   height: 10rem;
-  border: 1px solid black;
   padding: 0.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
 }
 
 .book-cover-thumbnail-wrapper {
@@ -70,21 +71,14 @@ export default {
 .book-cover-thumbnail-wrapper img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
-.book-desc-wrapper {
-  height: 100%;
-  width: 80%;
-  padding: 3px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+
+.book-hover-modal {
+  position: absolute;
+  top: -4rem;
+  left: 0;
 }
 
-.book-content{
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  width: 100%;
-}
 </style>
