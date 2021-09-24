@@ -1,6 +1,10 @@
 <template>
   <div class="book-report-wrapper">
-    <ReportBookInfo />
+    <div class="book-wrapper-header">
+      <ReportBookInfo />
+      <ReportTitleForm class="report-title-form-component" />
+    </div>
+
     <ReportMarkDown ref="reportMarkDown" />
     <ReportButton @click="submit" />
   </div>
@@ -23,4 +27,14 @@ export default {
   padding: 10% 10% 0;
 }
 
+.book-wrapper-header {
+  width: 100%;
+  position: relative;
+}
+
+.report-title-form-component {
+  position: absolute;
+  top: 0.5rem;
+  left: 10rem;
+}
 </style>
