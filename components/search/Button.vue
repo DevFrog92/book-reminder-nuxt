@@ -1,6 +1,9 @@
 <template>
   <div class="search-button-wrapper">
-    <button @click="$emit('click')">
+    <button
+      class="search_button"
+      @click="$emit('click')"
+    >
       Search
     </button>
   </div>
@@ -12,6 +15,16 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.search-button-wrapper {
+  min-width: 20%;
+}
+
+.search_button {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  border: 1px solid rgba(0,0,0,0.2);
+}
 
 </style>

@@ -16,9 +16,3 @@ export default {
 
 }
 </script>
-
-<style>
-.main {
-  padding: 5% 20% 0;
-}
-</style>

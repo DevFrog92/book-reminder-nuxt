@@ -3,6 +3,7 @@
     <input
       type="text"
       :value="value"
+      class="search_input"
       placeholder="도서명 또는 작가의 이름을 입력해주세요"
       @input="$emit('input', $event.target.value)"
       @keyup.enter.exact="$emit('enter')"
@@ -28,6 +29,18 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.search-input-form {
+  width: 60%;
+}
 
+.search_input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem;
+  outline: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-right: 0;
+}
 </style>
