@@ -53,13 +53,11 @@ export default {
   width: 100%;
   min-height: 100vh;
   padding: 0 20%;
-  border: 1px solid black
 }
 
 .search-form-wrapper {
   width: 100%;
   height: 5rem;
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
