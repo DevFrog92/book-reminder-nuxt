@@ -48,6 +48,18 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.report_wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 20%;
+}
 
+.search-form-wrapper {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
