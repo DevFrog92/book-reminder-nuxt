@@ -52,11 +52,12 @@ export default {
 .report_wrapper {
   width: 100%;
   min-height: 100vh;
-  padding: 0 20%;
+  padding: 0 10%;
 }
 
 .search-form-wrapper {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   height: 5rem;
   display: flex;
   justify-content: center;
