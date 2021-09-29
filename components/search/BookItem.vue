@@ -7,11 +7,11 @@
       >
     </div>
     <div class="book-info-wrapper">
+      <h3>
+        {{ bookItem.title }}
+      </h3>
       <div class="book-author">
         {{ bookItem.authors[0] }}
-      </div>
-      <div class="book-content">
-        {{ bookItem.contents }}
       </div>
       <button @click="moveToReport">
         독후감 작성하기
@@ -40,9 +40,10 @@ export default {
 
 <style scoped>
 .book-item-wrapper{
-  margin: 1rem 0;
+  min-width: 10rem;
+  height: 20rem;
   border: 1px solid;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 1rem;
   -webkit-box-shadow: 5px 5px 15px 0px #BABABA;
   box-shadow: 5px 5px 15px 0px #BABABA;
@@ -52,10 +53,18 @@ export default {
 
 .book-thumbnail {
   width: 20%;
+  height: 100%;
 }
 
 .book-info-wrapper {
   width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+.book-info-content {
+  font-size: 0.8rem;
+}
 </style>
