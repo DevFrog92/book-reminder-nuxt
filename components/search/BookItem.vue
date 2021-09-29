@@ -1,5 +1,5 @@
 <template>
-  <div class="book-item-wrapper ">
+  <div class="book-item-wrapper">
     <div class="book-author">
       {{ bookItem.authors[0] }}
     </div>
@@ -41,5 +41,7 @@ export default {
   margin: 1rem 0;
   border: 1px solid;
   padding: 1rem;
+  border-radius: 1rem;
+  
 }
 </style>
