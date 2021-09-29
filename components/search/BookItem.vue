@@ -4,6 +4,7 @@
       <img
         :src="bookItem.thumbnail"
         alt="book cover thumbnail"
+        class="book-thumbnail-img"
       >
     </div>
     <div class="book-info-desc">
@@ -40,11 +41,7 @@ export default {
 
 <style scoped>
 .book-item-wrapper{
-  min-width: 5rem;
-  min-height: 20rem;
-  border: 1px solid;
-  -webkit-box-shadow: 5px 5px 15px 0px #BABABA;
-  box-shadow: 5px 5px 15px 0px #BABABA;
+  min-height: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,19 +52,20 @@ export default {
 
 .book-thumbnail {
   position: absolute;
-  width: 100%;
-  height: 100%;
 }
 
-.book-thumbnail img {
+.book-thumbnail-img {
+  display: inline-block;
   width: 100%;
   height: 100%;
+  object-fit:contain;
+  -webkit-box-shadow: 5px 5px 15px 0px #BABABA;
+  box-shadow: 5px 5px 15px 0px #BABABA;
 }
 
 .book-info-desc {
   width:100%;
   height: 100%;
-  z-index: 3;
   position: absolute;
   color: #fff;
   background-color: rgba(0,0,0,0.8);
@@ -78,10 +76,12 @@ export default {
   align-items: center;
   opacity: 0;
   transition: all .4s ease-out;
+  z-index: -2;
 }
 
-.book-item-wrapper:hover .book-info-desc{
+.book-thumbnail-img:hover .book-info-desc{
   opacity: 1;
+  z-index: 3;
 }
 
 .book-info-title {
