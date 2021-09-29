@@ -6,11 +6,11 @@
         alt="book cover thumbnail"
       >
     </div>
-    <div class="book-info-wrapper">
-      <h3>
+    <div class="book-info-desc">
+      <h5 class="book-info-title">
         {{ bookItem.title }}
-      </h3>
-      <div class="book-author">
+      </h5>
+      <div class="book-info-author">
         {{ bookItem.authors[0] }}
       </div>
       <button @click="moveToReport">
@@ -40,31 +40,53 @@ export default {
 
 <style scoped>
 .book-item-wrapper{
-  min-width: 10rem;
-  height: 20rem;
+  min-width: 5rem;
+  min-height: 20rem;
   border: 1px solid;
-  padding: 1rem;
-  border-radius: 1rem;
   -webkit-box-shadow: 5px 5px 15px 0px #BABABA;
   box-shadow: 5px 5px 15px 0px #BABABA;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  cursor: pointer;
 }
 
 .book-thumbnail {
-  width: 20%;
+  position: absolute;
+  width: 100%;
   height: 100%;
 }
 
-.book-info-wrapper {
-  width: 80%;
+.book-thumbnail img {
+  width: 100%;
   height: 100%;
+}
+
+.book-info-desc {
+  width:100%;
+  height: 100%;
+  z-index: 3;
+  position: absolute;
+  color: #fff;
+  background-color: rgba(0,0,0,0.8);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  padding: 0 1rem;
+  align-items: center;
+  opacity: 0;
+  transition: all .4s ease-out;
 }
 
-.book-info-content {
-  font-size: 0.8rem;
+.book-item-wrapper:hover .book-info-desc{
+  opacity: 1;
 }
+
+.book-info-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
 </style>

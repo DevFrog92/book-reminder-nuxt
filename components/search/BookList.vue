@@ -20,11 +20,29 @@ export default {
 
 <style scoped>
 .search-items-wrapper {
+  margin-top: 3rem;
   width:100%;
   height: 100%;
   display: grid;
-  border: 1px solid;
-  gap: 10px 10px;
-  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem ;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width:1000px){
+  .search-items-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width:756px){
+  .search-items-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:480px){
+  .search-items-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 </style>
