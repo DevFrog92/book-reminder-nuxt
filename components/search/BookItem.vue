@@ -1,20 +1,22 @@
 <template>
   <div class="book-item-wrapper">
-    <div class="book-author">
-      {{ bookItem.authors[0] }}
-    </div>
-    <div class="book-content">
-      {{ bookItem.contents }}
-    </div>
     <div class="book-thumbnail">
       <img
         :src="bookItem.thumbnail"
         alt="book cover thumbnail"
       >
     </div>
-    <button @click="moveToReport">
-      독후감 작성하기
-    </button>
+    <div class="book-info-wrapper">
+      <div class="book-author">
+        {{ bookItem.authors[0] }}
+      </div>
+      <div class="book-content">
+        {{ bookItem.contents }}
+      </div>
+      <button @click="moveToReport">
+        독후감 작성하기
+      </button>
+    </div>
   </div>
 </template>
 
@@ -40,8 +42,20 @@ export default {
 .book-item-wrapper{
   margin: 1rem 0;
   border: 1px solid;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 1rem;
-  
+  -webkit-box-shadow: 5px 5px 15px 0px #BABABA;
+  box-shadow: 5px 5px 15px 0px #BABABA;
+  display: flex;
+  align-items: center;
 }
+
+.book-thumbnail {
+  width: 20%;
+}
+
+.book-info-wrapper {
+  width: 80%;
+}
+
 </style>
