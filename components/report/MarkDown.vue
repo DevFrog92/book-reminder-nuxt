@@ -7,7 +7,7 @@
         :initial-value="initalValue"
         :options="options"
         align="left"
-        height="600px"
+        height="500px"
       />
     </ClientOnly>
   </div>
@@ -17,7 +17,6 @@
 export default {
   data() {
     return {
-      initalValue: "이곳에 작성해주세요!",
       contentTitle: "",
       options: {
         language: "ko",

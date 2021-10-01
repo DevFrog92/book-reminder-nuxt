@@ -2,7 +2,6 @@
   <div class="book-report-wrapper">
     <div class="book-wrapper-header">
       <ReportTitleForm />
-      <!-- <ReportBookInfo /> -->
     </div>
     <ReportHashTag />
     <ReportMarkDown ref="reportMarkDown" />
@@ -28,8 +27,7 @@ export default {
 <style scope>
 .book-report-wrapper {
   width: 100%;
-  min-height: 100vh;
-  padding: 5% 10% 2%;
+  padding: 1% 10% 0%;
 }
 
 .book-wrapper-header {

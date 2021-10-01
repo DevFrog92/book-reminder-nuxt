@@ -4,7 +4,7 @@
       class="submit-button"
       @click="$emit('click')"
     >
-      저장하긴
+      저장하기
     </button>
   </div>
 </template>
@@ -30,7 +30,6 @@ export default {
   background-color: #eee;
   color: rgba(0,0,0,0.8);
   font-size: 1.1rem;
-  font-weight: 600;
   border-radius: 3px;
   box-shadow: 2px 2px 5px 0px #BABABA;
   cursor: pointer;
