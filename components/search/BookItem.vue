@@ -7,7 +7,10 @@
       class="book-thumbnail-img"
       @click="moveToReport"
     >
-    <div v-else>
+    <div
+      v-else
+      class="no-img-wrapper"
+    >
       <img
         src="~/assets/images/oops.svg"
         alt="book cover thumbnail"
@@ -61,6 +64,13 @@ export default {
   object-fit:contain;
   -webkit-box-shadow: 5px 5px 15px 0px #BABABA;
   box-shadow: 5px 5px 15px 0px #BABABA;
+}
+
+.no-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .book-thumbnail-no-img {
