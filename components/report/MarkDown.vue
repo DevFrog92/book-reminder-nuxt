@@ -1,20 +1,13 @@
 <template>
   <div class="mark-down-wrapper">
     <ClientOnly>
-      <div class="report-title">
-        <label for="title">report title</label>
-        <input
-          v-model="contentTitle"
-          type="text"
-          class="title"
-        >
-      </div>
       <editor
         ref="toastTextUi"
+        initial-edit-type="wysiwyg"
         :initial-value="initalValue"
         :options="options"
         align="left"
-        height="600px"
+        height="500px"
       />
     </ClientOnly>
   </div>
@@ -24,7 +17,6 @@
 export default {
   data() {
     return {
-      initalValue: "이곳에 작성해주세요!",
       contentTitle: "",
       options: {
         language: "ko",
@@ -54,5 +46,7 @@ export default {
 </script>
 
 <style scoped>
-
+.mark-down-wrapper {
+  width: 100%;
+}
 </style>

@@ -1,7 +1,10 @@
 <template>
   <div class="search-button-wrapper">
-    <button @click="$emit('click')">
-      Write
+    <button
+      class="submit-button"
+      @click="$emit('click')"
+    >
+      저장하기
     </button>
   </div>
 </template>
@@ -12,6 +15,23 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.search-button-wrapper {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
 
+.submit-button {
+  width: 6rem;
+  height: 2rem;
+  border: 1px solid #eee;
+  background-color: #eee;
+  color: rgba(0,0,0,0.8);
+  font-size: 1.1rem;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px 0px #BABABA;
+  cursor: pointer;
+}
 </style>

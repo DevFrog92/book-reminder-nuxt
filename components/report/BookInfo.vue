@@ -1,23 +1,17 @@
 <template>
   <div class="book-info-wrapper">
-    <div class="book-cover-thumbnail-wrapper">
-      <img
-        :src="bookInfo.thumbnail"
-        alt="book cover"
-        class="book-cover-img"
-        @click="showDesc"
-      >
-    </div>
-    <ReportHoverModal
-      v-if="showDescState"
-      class="book-hover-modal"
-      :book-info="bookInfo"
-    />
+    <img
+      :src="bookInfo.thumbnail"
+      alt="book cover"
+      class="book-cover-img"
+      @click="showDesc"
+    >
   </div>
 </template>
 
 <script>
 import { getItem, } from "~/assets/util/localStorage.js"
+
 export default {
   data() {
     return {
@@ -52,33 +46,25 @@ export default {
 
 <style scoped>
 .book-info-wrapper {
-  width: 100%;
-  height: 10rem;
-  padding: 0.5rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-}
-
-.book-cover-thumbnail-wrapper {
+  width: 20%;
   height: 100%;
-  width: 7rem;
-  border: 3px solid black;
-  border-style: ridge;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
-.book-cover-thumbnail-wrapper img {
-  width: 100%;
+.book-cover-img {
   height: 100%;
   cursor: pointer;
+  -webkit-box-shadow: 5px 5px 15px 0px #BABABA;
+  box-shadow: 5px 5px 15px 0px #BABABA;
+  object-fit: contain;
+  display: block;
 }
-
 
 .book-hover-modal {
   position: absolute;
   top: -4rem;
   left: 0;
 }
-
 </style>

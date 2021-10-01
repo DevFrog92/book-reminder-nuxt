@@ -8,13 +8,6 @@
     </div>
     <Nuxt-link
       class="link"
-      to="/report"
-    >
-      독후감
-    </Nuxt-link>
-
-    <Nuxt-link
-      class="link"
       to="/search"
     >
       도서검색
@@ -59,7 +52,7 @@ export default {
 }
 
 .link {
-  margin-right: 1.5rem;
+  margin-right: 3rem;
   color: rgba(0,0,0,0.8);
   padding: 0.5rem;
   font-size: .8rem;
@@ -92,5 +85,4 @@ export default {
   color: #2AC8A2;
   text-decoration: none;
 }
-
 </style>
