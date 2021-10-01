@@ -17,7 +17,7 @@ export default {
 <style scoped>
 .report-title-form-wrapper {
   width: 80%;
-  height: 9rem;
+  height: 100%;
   border: 1px solid;
 }
 

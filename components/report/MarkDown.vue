@@ -11,6 +11,7 @@
       </div>
       <editor
         ref="toastTextUi"
+        initial-edit-type="wysiwyg"
         :initial-value="initalValue"
         :options="options"
         align="left"

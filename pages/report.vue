@@ -12,6 +12,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      showDescState: false,
+    }
+  },
   methods: {
     submit() {
       this.$refs.reportMarkDown.getContent()
@@ -29,12 +34,9 @@ export default {
 
 .book-wrapper-header {
   width: 100%;
-  position: relative;
-}
-
-.report-title-form-component {
-  position: absolute;
-  top: 0.5rem;
-  left: 10rem;
+  height: 10rem;
+  border: 1px solid;
+  display: flex;
+  justify-content: space-evenly;
 }
 </style>
