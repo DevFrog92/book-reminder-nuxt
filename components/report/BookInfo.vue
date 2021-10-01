@@ -62,7 +62,6 @@ export default {
   display: block;
 }
 
-
 .book-hover-modal {
   position: absolute;
   top: -4rem;
