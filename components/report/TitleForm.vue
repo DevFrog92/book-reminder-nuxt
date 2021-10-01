@@ -2,15 +2,27 @@
   <div class="report-title-form-wrapper">
     <input
       id="title"
+      :value="value"
       type="text"
       placeholder="제목을 입력하세요"
+      @input="setReportTitle"
     >
   </div>
 </template>
 
 <script>
 export default {
-
+  props: {
+    value: {
+      type: String,
+      default: "",
+    },
+  },
+  methods: {
+    setReportTitle(e) {
+      this.$emit("input", e.target.value)
+    },
+  },
 }
 </script>
 
