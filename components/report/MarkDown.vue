@@ -3,7 +3,6 @@
     <ClientOnly>
       <editor
         ref="toastTextUi"
-        initial-edit-type="wysiwyg"
         :initial-value="initalValue"
         :options="options"
         align="left"
@@ -17,7 +16,6 @@
 export default {
   data() {
     return {
-      contentTitle: "",
       options: {
         language: "ko",
         hooks: { addImageBlobHook: this.addImageBlobHook, },
@@ -33,12 +31,11 @@ export default {
       const content = this.$refs.toastTextUi.invoke("getHTML")
       const createdAt = `${now.getFullYear()}.${now.getMonth() + 1}.${now.getDate()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
       const report = {
-        title: this.contentTitle,
         content: content,
         createdAt,
       }
 
-      this.$store.commit("report/SET_REPORT_CONTENTS", report)
+      this.$emit("setContent", report)
     },
   },
 
