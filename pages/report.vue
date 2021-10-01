@@ -1,8 +1,8 @@
 <template>
   <div class="book-report-wrapper">
     <div class="book-wrapper-header">
-      <ReportBookInfo />
       <ReportTitleForm class="report-title-form-component" />
+      <ReportBookInfo />
     </div>
 
     <ReportMarkDown ref="reportMarkDown" />
@@ -35,8 +35,8 @@ export default {
 .book-wrapper-header {
   width: 100%;
   height: 10rem;
-  border: 1px solid;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin-bottom: 3rem;
 }
 </style>

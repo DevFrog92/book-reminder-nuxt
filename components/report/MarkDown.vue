@@ -1,14 +1,6 @@
 <template>
   <div class="mark-down-wrapper">
     <ClientOnly>
-      <div class="report-title">
-        <label for="title">report title</label>
-        <input
-          v-model="contentTitle"
-          type="text"
-          class="title"
-        >
-      </div>
       <editor
         ref="toastTextUi"
         initial-edit-type="wysiwyg"
