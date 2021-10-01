@@ -11,6 +11,7 @@
 
 <script>
 import { getItem, } from "~/assets/util/localStorage.js"
+
 export default {
   data() {
     return {

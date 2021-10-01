@@ -4,7 +4,7 @@
       <ReportTitleForm class="report-title-form-component" />
       <ReportBookInfo />
     </div>
-
+    <ReportHashTag />
     <ReportMarkDown ref="reportMarkDown" />
     <ReportButton @click="submit" />
   </div>
