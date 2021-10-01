@@ -39,6 +39,7 @@ export default {
 .tag {
   margin-right: 0.5rem;
   background-color: #eee;
+  font-size: 0.8rem;
   padding: 0.3rem;
   box-shadow: 1px 1px 5px 0px #BABABA;
 }
