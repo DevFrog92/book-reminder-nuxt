@@ -13,12 +13,6 @@
 import { getItem, } from "~/assets/util/localStorage.js"
 
 export default {
-  props: {
-    book: {
-      type: Object,
-      default: () => ({}),
-    },
-  },
   data() {
     return {
       bookInfo: {
@@ -39,13 +33,13 @@ export default {
 .hash-tag-list {
   display: flex;
   list-style: none;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .tag {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   background-color: #eee;
-  padding: 0.2rem;
+  padding: 0.3rem;
+  box-shadow: 1px 1px 5px 0px #BABABA;
 }
-
 </style>

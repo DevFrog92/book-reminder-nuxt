@@ -47,5 +47,7 @@ export default {
 </script>
 
 <style scoped>
-
+.mark-down-wrapper {
+  width: 100%;
+}
 </style>

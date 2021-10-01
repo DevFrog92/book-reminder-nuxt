@@ -36,10 +36,10 @@ export default {
 
 .search_input {
   width: 100%;
-  height: 2.5rem;
+  height: 3rem;
   padding: 0.5rem;
   outline: none;
-  border-radius: 0.5rem 0 0 0.5rem;
+  border-radius: 2px 0 0 2px;
   border: 1px solid rgba(0,0,0,0.2);
   border-right: 0;
 }
