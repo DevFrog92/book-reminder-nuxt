@@ -1,12 +1,9 @@
 <template>
   <div class="report-title-form-wrapper">
-    <label
-      class="report-title"
-      for="title"
-    >제목</label>
     <input
       id="title"
       type="text"
+      placeholder="제목을 입력하세요"
     >
   </div>
 </template>
@@ -23,14 +20,6 @@ export default {
   height: 100%;
   display: flex;
   align-items: flex-end;
-}
-
-.report-title {
-  font-size: 1.2rem;
-  letter-spacing: 3px;
-  font-weight: 600;
-  writing-mode: vertical-lr;
-  margin-right: 1rem;
 }
 
 #title {
