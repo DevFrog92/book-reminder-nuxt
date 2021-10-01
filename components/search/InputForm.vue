@@ -5,7 +5,7 @@
       :value="value"
       class="search_input"
       placeholder="도서명 또는 작가의 이름을 입력해주세요"
-      @input="$emit('input', $event.target.value)"
+      @input="setSearchValue"
       @keyup.enter.exact="$emit('enter')"
     >
   </div>
@@ -19,12 +19,10 @@ export default {
       default: "",
     },
   },
-  data() {
-    return {
-      bookTitle: "",
-    }
-  },
   methods: {
+    setSearchValue(e) {
+      this.$emit("input", e.target.value)
+    },
   },
 }
 </script>

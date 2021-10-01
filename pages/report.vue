@@ -1,10 +1,13 @@
 <template>
   <div class="book-report-wrapper">
     <div class="book-wrapper-header">
-      <ReportTitleForm />
+      <ReportTitleForm v-model="reportTitle" />
     </div>
     <ReportHashTag />
-    <ReportMarkDown ref="reportMarkDown" />
+    <ReportMarkDown
+      ref="reportMarkDown"
+      @setContent="setContent"
+    />
     <ReportButton @click="submit" />
   </div>
 </template>
@@ -13,12 +16,20 @@
 export default {
   data() {
     return {
-      showDescState: false,
+      reportTitle: "",
     }
   },
   methods: {
     submit() {
       this.$refs.reportMarkDown.getContent()
+    },
+    setContent(report) {
+      report = {
+        ...report,
+        title: this.reportTitle,
+      }
+      
+      this.$store.commit("report/SET_REPORT_CONTENTS", report)
     },
   },
 }

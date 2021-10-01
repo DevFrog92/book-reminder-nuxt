@@ -4,16 +4,10 @@
       class="search_button"
       @click="$emit('click')"
     >
-      Search
+      검색하기
     </button>
   </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style scoped>
 .search-button-wrapper {
