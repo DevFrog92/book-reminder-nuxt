@@ -25,10 +25,10 @@ export default {
     },
     setContent(report) {
       report = {
-        ...report,
         title: this.reportTitle,
+        ...report,
       }
-      
+
       this.$store.commit("report/SET_REPORT_CONTENTS", report)
     },
   },

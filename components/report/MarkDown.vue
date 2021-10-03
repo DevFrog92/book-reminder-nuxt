@@ -3,7 +3,6 @@
     <ClientOnly>
       <editor
         ref="toastTextUi"
-        :initial-value="initalValue"
         :options="options"
         align="left"
         height="500px"
@@ -13,6 +12,8 @@
 </template>
 
 <script>
+import { getItem, } from "~/assets/util/localStorage.js"
+
 export default {
   data() {
     return {
@@ -20,7 +21,11 @@ export default {
         language: "ko",
         hooks: { addImageBlobHook: this.addImageBlobHook, },
       },
+      bookInfo: null,
     }
+  },
+  beforeMount() {
+    this.bookInfo = getItem("bookInfo")
   },
   methods: {
     addImageBlobHook() {
@@ -33,6 +38,7 @@ export default {
       const report = {
         content: content,
         createdAt,
+        thumbnail: this.bookInfo.thumbnail,
       }
 
       this.$emit("setContent", report)

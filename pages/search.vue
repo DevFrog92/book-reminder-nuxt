@@ -7,7 +7,7 @@
       />
       <SearchButton @click="search" />
     </section>
-    <SearchBookList />
+    <BookList :book-list="BookList" />
   </div>
 </template>
 
@@ -20,6 +20,11 @@ export default {
       bookTitle: "",
       calledSearch: false,
     }
+  },
+  computed: {
+    BookList() {
+      return this.$store.state.search.BookList || null
+    },
   },
   methods: {
     async search() {

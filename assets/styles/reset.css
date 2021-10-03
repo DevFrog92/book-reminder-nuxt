@@ -34,6 +34,10 @@
   --bg: #f5f3f1;
 }
 
+#main {
+  position: relative;
+}
+
 body {
   margin: 0;
   padding: 0;
