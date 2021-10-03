@@ -1,7 +1,7 @@
 <template>
   <div class="search-items-wrapper">
-    <SearchBookItem
-      v-for="(bookItem,index) in searchBookList"
+    <BookItem
+      v-for="(bookItem,index) in bookList"
       :key="index"
       :book-item="bookItem"
     />
@@ -10,9 +10,10 @@
 
 <script>
 export default {
-  computed: {
-    searchBookList() {
-      return this.$store.state.search.searchBookList || null
+  props: {
+    bookList: {
+      type: Array,
+      default: () => [],
     },
   },
 }
