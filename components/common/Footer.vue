@@ -1,12 +1,19 @@
 <template>
   <div class="footer-wrapper">
     this is footer
+    <button @click="show">
+      show
+    </button>
   </div>
 </template>
 
 <script>
 export default {
-
+  methods: {
+    show() {
+      this.$nuxt.$emit("show:toast")
+    },
+  },
 }
 </script>
 

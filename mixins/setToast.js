@@ -1,26 +1,15 @@
-<template>
-  <div class="">
-    toast
-    <button @click="appendToast">
-      append
-    </button>
-    <button @click="removeToast">
-      remove
-    </button>
-  </div>
-</template>
-
-<script>
 export default {
-  layout: "test",
   data() {
     return {
       bodyElem: null,
       toastElem: null,
     }
   },
+  created() {
+    console.log("here")
+    this.$nuxt.$on("show:toast", this.appendToast)
+  },
   mounted() {
-    // const nuxtRootElem = document.querySelector("#__nuxt")
     this.grabBodyElem()
   },
   methods: {
@@ -37,7 +26,6 @@ export default {
     },
     grabBodyElem() {
       this.bodyElem = document.querySelector("body")
-      // this.bodyElem = document.querySelector("#__nuxt")
     },
     createToastElem() {
       this.toastElem = document.createElement("div")
@@ -51,8 +39,7 @@ export default {
       this.bodyElem.removeChild(this.toastElem)
     },
   },
+  beforeDestory() {
+    this.$nuxt.$off("show:toast", this.appendChild)
+  },
 }
-</script>
-
-<style>
-</style>

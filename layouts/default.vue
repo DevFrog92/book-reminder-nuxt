@@ -12,9 +12,12 @@
 
 <script>
 import Footer from "~/components/common/Footer"
+import setToast from "../mixins/setToast"
+
 export default {
   components: {
     Footer,
   },
+  mixins: [setToast],
 }
 </script>
