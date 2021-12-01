@@ -1,7 +1,7 @@
 <template>
   <ul class="hash-tag-list">
     <li class="tag">
-      # {{ bookInfo.authors[0] }}
+      <!-- # {{ bookInfo.authors[0] }} -->
     </li>
     <li class="tag">
       # {{ bookInfo.title }}
