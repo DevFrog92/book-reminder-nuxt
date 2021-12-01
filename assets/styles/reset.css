@@ -44,4 +44,22 @@ body {
   box-sizing: border-box;
   background-color: var(--bg);
   font-family: Pretendard;
+  position: relative;
+}
+
+.toast_component_wrapper {
+  width: 250px;
+  height: 80px;
+  border: 1px solid red;
+  background-color: rgb(177, 46, 46);
+  border-radius: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #fff;
 }

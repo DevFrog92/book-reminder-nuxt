@@ -12,6 +12,12 @@
     >
       도서검색
     </Nuxt-link>
+    <Nuxt-link
+      class="link"
+      to="/toast"
+    >
+      toast
+    </Nuxt-link>
   </nav>
 </template>
 
