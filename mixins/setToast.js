@@ -6,24 +6,12 @@ export default {
     }
   },
   created() {
-    console.log("here")
     this.$nuxt.$on("show:toast", this.appendToast)
   },
   mounted() {
     this.grabBodyElem()
   },
   methods: {
-    appendToast() {
-      const toastElem = this.createToastElem()
-
-      this.bodyElem.appendChild(toastElem)
-      setTimeout(() => {
-        this.toastElem.classList.add("hide")
-        setTimeout(() => {
-          this.removeToast()
-        }, 1000)
-      }, 2000)
-    },
     grabBodyElem() {
       this.bodyElem = document.querySelector("body")
     },
@@ -38,6 +26,17 @@ export default {
     removeToast() {
       this.bodyElem.removeChild(this.toastElem)
     },
+  },
+  appendToast() {
+    const toastElem = this.createToastElem()
+
+    this.bodyElem.appendChild(toastElem)
+    setTimeout(() => {
+      this.toastElem.classList.add("hide")
+      setTimeout(() => {
+        this.removeToast()
+      }, 1000)
+    }, 2000)
   },
   beforeDestory() {
     this.$nuxt.$off("show:toast", this.appendChild)
