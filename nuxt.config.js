@@ -26,6 +26,10 @@ export default {
     {
       src: "~plugins/tui-editor.js",
       ssr: false,
+    },
+    {
+      src: "~plugins/v-calendar.js",
+      ssr: false,
     }
   ],
 
@@ -33,7 +37,7 @@ export default {
   components: {
     dirs: [
       "~/components",
-      "~/components/common"
+      "~/components/common/"
     ],
   },
 
